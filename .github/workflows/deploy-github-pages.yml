@@ -1,5 +1,4 @@
-# Деплой лише фронтенду (client/dist). API Express на GitHub Pages не працює —
-# контакти на сайті беруться з fallback у BookingSection, або підключіть хостинг API.
+# Деплой лише фронтенду (client/dist). API Express на GitHub Pages не працює.
 
 name: Deploy to GitHub Pages
 
@@ -23,6 +22,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/configure-pages@v5
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -32,12 +33,12 @@ jobs:
       - name: Install & build client
         working-directory: client
         env:
-          VITE_BASE: /${{ github.event.repository.name }}/
+          VITE_BASE: '/${{ github.event.repository.name }}/'
         run: |
           npm ci
           npm run build
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: client/dist
 
