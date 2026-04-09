@@ -60,7 +60,7 @@ export function BookingSection() {
               </div>
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
-                  href="https://t.me/andrey_petrenko27"
+                  href="https://t.me/julia_petrenko91"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex rounded-full bg-rose-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-rose-500"
