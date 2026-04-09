@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Cormorant Garamond', ui-serif, Georgia, serif;
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-cream-50: #fdfcfa;
+  --color-cream-100: #faf7f2;
+  --color-cream-200: #f0ebe3;
+  --color-rose-300: #eecdd3;
+  --color-rose-500: #d4848f;
+  --color-rose-600: #c45c6a;
+  --color-ink-700: #3d3834;
+  --color-ink-800: #2c2824;
+  --color-ink-900: #1a1816;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-ink-800 font-sans antialiased;
+  }
+}
