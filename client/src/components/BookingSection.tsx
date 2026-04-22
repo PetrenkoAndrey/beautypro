@@ -1,5 +1,5 @@
 const phone = '+380961345475'
-const address = 'м.Нікополь, проспект Трубників 75'
+const address = 'м. Нікополь'
 const hours = 'Пн–Сб 10:00 — 18:00, Нд вихідний'
 
 export function BookingSection() {
