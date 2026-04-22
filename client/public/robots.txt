@@ -1,0 +1,5 @@
+# Якщо зміните домен — оновіть рядок Sitemap.
+User-agent: *
+Allow: /
+
+Sitemap: https://petrenkoandrey.github.io/beautypro/sitemap.xml

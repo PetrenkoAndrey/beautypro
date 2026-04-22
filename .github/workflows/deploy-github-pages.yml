@@ -1,4 +1,4 @@
-# Деплой лише фронтенду (client/dist). API Express на GitHub Pages не працює.
+# Статичний фронтенд (client/dist) на GitHub Pages.
 
 name: Deploy to GitHub Pages
 

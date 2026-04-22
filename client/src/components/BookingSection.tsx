@@ -1,25 +1,8 @@
-import { useEffect, useState } from 'react'
-
-type SalonInfo = {
-  phone: string
-  address: string
-  hours: string
-}
+const phone = '+380961345475'
+const address = 'м.Нікополь, проспект Трубників 75'
+const hours = 'Пн–Сб 10:00 — 18:00, Нд вихідний'
 
 export function BookingSection() {
-  const [info, setInfo] = useState<SalonInfo | null>(null)
-
-  useEffect(() => {
-    fetch('/api/salon')
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data: SalonInfo | null) => setInfo(data))
-      .catch(() => setInfo(null))
-  }, [])
-
-  const phone = info?.phone ?? '+380961345475'
-  const address = info?.address ?? 'м.Нікополь, проспект Трубників 75'
-  const hours = info?.hours ?? 'Пн–Сб 10:00 — 18:00, Нд вихідний'
-
   return (
     <section id="booking" className="scroll-mt-24 bg-cream-100 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -42,7 +25,10 @@ export function BookingSection() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-rose-300/90">
                   Телефон
                 </p>
-                <a href={`tel:${phone.replace(/\s/g, '')}`} className="mt-1 block text-xl font-semibold hover:text-rose-300">
+                <a
+                  href={`tel:${phone.replace(/\s/g, '')}`}
+                  className="mt-1 block text-xl font-semibold hover:text-rose-300"
+                >
                   {phone}
                 </a>
               </div>
